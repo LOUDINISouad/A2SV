@@ -1,0 +1,21 @@
+class Solution(object):
+    def numberOfEmployeesWhoMetTarget(self, hours, target):
+        """
+        :type hours: List[int]
+        :type target: int
+        :rtype: int
+        """
+        count = 0
+
+        for h in hours:
+            if h >= target:
+                count += 1
+
+        return count
+
+# Example usage:
+solution = Solution()
+hours = [0, 1, 2, 3, 4]
+target = 2
+result = solution.numberOfEmployeesWhoMetTarget(hours, target)
+print(result)
